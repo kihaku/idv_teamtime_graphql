@@ -1,0 +1,50 @@
+scalar Date
+
+"""
+Angestellter unseres Testunternehmens
+"""
+type Employee {
+    """Nachname des Mitarbeiters"""
+    lastName: String!
+    """Vorname des Mitarbeiters"""
+    firstName: String!
+    """Gehalt des Mitarbeiters"""
+    salary: Float!
+    """Der Tag an dem das Arbeitsverhältnis startete"""
+    employmentDate: Date!
+    """Die Wohnadresse des Angestellten"""
+    address: Address
+}
+"""
+# Eine simple Adresse
+"""
+type Address {
+    """Straße der Adresse"""
+    street: String!
+    """Hausnummer der Adresse"""
+    streetNumber: String!
+    """Stadt der Adresse"""
+    city: String!
+    """PLZ der Adresse"""
+    postalCode: String!
+    """Land der Adresse"""
+    country: String!
+}
+
+type Department {
+    name: String!
+    head: Employee
+    employees: [Employee!]
+}
+
+type Query {
+    """Gibt alle bekannten Mitarbeiter unseres Testunternehmens zurück"""
+    allEmployees: [Employee]
+    """Gibt den Mitarbeiter mit der gegeben ID zurück, falls nicht gefunden, wild NULL zurückgegeben"""
+    employee(employeeId: ID!): Employee
+    allDepartments: [Department]
+}
+
+schema {
+    query: Query
+}
