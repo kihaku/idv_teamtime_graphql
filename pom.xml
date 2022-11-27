@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>org.example</groupId>
+    <groupId>de.idv</groupId>
     <artifactId>idv_teamtime_graphql</artifactId>
     <version>1.0-SNAPSHOT</version>
 
