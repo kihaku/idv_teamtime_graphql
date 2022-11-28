@@ -1,0 +1,27 @@
+{
+  employee(employeeId: 1){
+    lastName
+    firstName
+    address {
+      street
+      streetNumber
+      city
+      postalCode
+      country
+    }
+  }
+
+  employee(employeeId: 2){
+    lastName
+    firstName
+    address {
+      street
+      streetNumber
+      city
+      postalCode
+      country
+    }
+  }
+}
+
+# Error -> name conflict

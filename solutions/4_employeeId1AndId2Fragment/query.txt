@@ -1,0 +1,21 @@
+fragment myFragment on Employee {
+    lastName
+    firstName
+    address {
+      street
+      streetNumber
+      city
+      postalCode
+      country
+    } 
+}
+
+{
+  firstEmployee: employee(employeeId: 1){
+    ...myFragment
+  }
+
+  secondEmployee: employee(employeeId: 51){
+    ...myFragment
+  }
+}

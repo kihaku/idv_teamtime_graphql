@@ -31,11 +31,40 @@ type Address {
     country: String!
 }
 
+type Department {
+    name: String!
+    head: Employee
+    employees: [Employee!]
+}
+
+type Project {
+    name: String!
+    personHours: Int
+    hourlyRate: Float
+    customer: Customer
+    employees: [Employee!]
+}
+
+type Customer {
+    name: String!
+    address: Address
+    projects: [Project!]
+}
+
 type Query {
     """Gibt alle bekannten Mitarbeiter unseres Testunternehmens zurück"""
     allEmployees: [Employee]
     """Gibt den Mitarbeiter mit der gegeben ID zurück, falls nicht gefunden, wild NULL zurückgegeben"""
     employee(employeeId: ID!): Employee
+
+    allDepartments: [Department]
+    department(departmentId: ID!): Department
+
+    allCustomers: [Customer]
+    customer(customerId: ID!): Customer
+
+    allProjects: [Project]
+    project(projectId: ID!): Project
 }
 
 schema {

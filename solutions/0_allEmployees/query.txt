@@ -1,0 +1,6 @@
+{
+  allEmployees {
+    lastName
+    firstName
+  }
+}

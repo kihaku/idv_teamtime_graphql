@@ -1,0 +1,13 @@
+{
+  allEmployees {
+    lastName
+    firstName
+    address {
+      street
+      streetNumber
+      city
+      postalCode
+      country
+    }
+  }
+}

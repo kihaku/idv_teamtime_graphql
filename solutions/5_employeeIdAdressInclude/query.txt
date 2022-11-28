@@ -1,0 +1,20 @@
+query myPersonQuery($eid: ID!, $withAddress: Boolean!){
+  employee(employeeId: $eid){
+    lastName
+    firstName
+    address @include(if: $withAddress) {
+      street
+      streetNumber
+      city
+      postalCode
+      country
+    }
+  }
+}
+
+
+Variables:
+{
+  "eid": 1,
+  "withAddress": false
+}

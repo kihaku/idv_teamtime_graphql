@@ -1,0 +1,23 @@
+mutation createPerson($input: ProjectInput!) {
+  createProject(input: $input) {
+    name
+  }
+}
+
+{
+  allProjects {
+    name
+  }
+}
+
+
+Variables:
+{
+  "input": {
+    "name": "fooabr",
+    "personHours": 100,
+    "hourlyRate": 75,
+    "customerId": 1,
+    "employeeIds": [1]
+  }
+}

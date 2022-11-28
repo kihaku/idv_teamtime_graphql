@@ -1,0 +1,25 @@
+{
+  allEmployees {
+    lastName
+    firstName
+    address {
+      street
+      streetNumber
+      city
+      postalCode
+      country
+    }
+  }
+
+  employee(employeeId: 1){
+    lastName
+    firstName
+    address {
+      street
+      streetNumber
+      city
+      postalCode
+      country
+    }
+  }
+}
