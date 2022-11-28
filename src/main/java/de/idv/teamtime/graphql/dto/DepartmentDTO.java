@@ -1,10 +1,6 @@
 package de.idv.teamtime.graphql.dto;
 
 import de.idv.teamtime.graphql.entity.Employee;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
 public class DepartmentDTO {
 

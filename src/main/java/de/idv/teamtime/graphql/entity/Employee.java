@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @Entity
 public class Employee {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String lastName;
     private String firstName;
